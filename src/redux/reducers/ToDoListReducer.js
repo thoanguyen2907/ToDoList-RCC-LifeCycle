@@ -54,8 +54,9 @@ export default (state = initialState, action) => {
         state.taskList = taskListUpdate  
         return {...state}
         case EDIT_TASK: 
-        state.taskEdit = action.task; 
 
+        state.taskEdit = action.task; 
+        console.log(state.taskEdit)
         return {...state}
         case UPDATE_TASK: 
         state.taskEdit = {...state.taskEdit, taskName : action.taskUpdate}; 
